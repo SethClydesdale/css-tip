@@ -1,0 +1,30 @@
+/* FADE IN */
+[data-csstip]:before  {
+  opacity:0;
+  transition:300ms;
+}
+[data-csstip]:hover:before { opacity:1 }
+
+
+/* POP IN */
+[data-csstip]:before  {
+  transform:scale(0);
+  transition:ease-in-out 300ms;
+}
+[data-csstip]:hover:before { transform:scale(1) }
+
+
+/* ROTATE IN */
+[data-csstip]:before  {
+  transform:rotate(360deg) scale(0);
+  transition:ease-in-out 300ms;
+}
+[data-csstip]:hover:before { transform:rotate(0deg) scale(1) }
+
+
+/* SLIDE IN */
+[data-csstip]:before  {
+  margin-left:-100px;
+  transition:300ms;
+}
+[data-csstip]:hover:before { margin-left:0px }
