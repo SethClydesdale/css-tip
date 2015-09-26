@@ -3,7 +3,7 @@
   
   function replaceTooltip() {
     for (var all = document.getElementsByTagName('*'), i = 0, j = all.length; i < j; i++) {
-      if (all[i].title) {
+      if (all[i].title && all[i].dataset) {
         all[i].dataset.csstip = all[i].title;
         all[i].title = '';
       }
