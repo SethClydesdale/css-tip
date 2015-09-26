@@ -1,0 +1,24 @@
+/* TOOLTIP TEXT RESET / DEFAULT PROPERTIES */
+[data-csstip]:before {
+  content:attr(data-csstip);
+  font:normal normal normal 12px/1 Arial, Helvetica, Sans-serif;
+  letter-spacing:normal;
+  line-height:12px;
+  text-indent:0;
+  text-shadow:none;
+  text-decoration:none;
+  text-transform:none;
+  text-align:left;
+  white-space:normal;
+  word-break:normal;
+  word-spacing:normal;
+  word-wrap:normal;
+  pointer-events:none;
+  border-radius:3px;
+  position:absolute;
+  margin-top:25px; /* tooltip offset */
+  visibility:hidden;
+  padding:3px;
+  z-index:1;
+}
+[data-csstip]:hover:before { visibility:visible }
