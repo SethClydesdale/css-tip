@@ -1,0 +1,17 @@
+/* TOOLTIP STYLE */
+
+/* LIGHT SKIN */
+[data-csstip]:before {
+  color:#555;
+  background:#FFF;
+  border:1px solid #777;
+  box-shadow:0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* DARK SKIN */
+[data-csstip]:before {
+  color:#CCC;
+  background:#333;
+  border:1px solid #666;
+}
