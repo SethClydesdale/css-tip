@@ -1,4 +1,7 @@
 /* TOOLTIP TEXT RESET / DEFAULT PROPERTIES */
+[data-csstip] {
+  position:relative;
+}
 [data-csstip]:before {
   content:attr(data-csstip);
   font:normal normal normal 12px/1 Arial, Helvetica, Sans-serif;
@@ -16,9 +19,67 @@
   pointer-events:none;
   border-radius:3px;
   position:absolute;
-  margin-top:25px; /* tooltip offset */
   visibility:hidden;
   padding:3px;
   z-index:1;
+  min-width: 65px;
+  max-width: 300px;
+}
+[data-csstip]:before , [data-csstip-placement="bottom"]:before {
+  top: 20px;
+}
+[data-csstip-placement="top"]:before {
+    bottom: 20px;
+    top: -20px;
+    width: 250px;
 }
 [data-csstip]:hover:before { visibility:visible }
+
+
+
+/* FADE IN */
+[data-csstip-effect="fadein"]:before  {
+  opacity:0;
+  transition:300ms;
+}
+[data-csstip-effect="fadein"]:hover:before { opacity:1 }
+
+
+/* POP IN */
+[data-csstip-effect="popin"]:before  {
+  transform:scale(0);
+  transition:ease-in-out 300ms;
+}
+[data-csstip-effect="popin"]:hover:before { transform:scale(1) }
+
+
+/* ROTATE IN */
+[data-csstip-effect="rotatein"]:before  {
+  transform:rotate(360deg) scale(0);
+  transition:ease-in-out 300ms;
+}
+[data-csstip-effect="rotatein"]:hover:before { transform:rotate(0deg) scale(1) }
+
+
+/* SLIDE IN */
+[data-csstip-effect="slide"]:before  {
+  margin-left:-100px;
+  transition:300ms;
+}
+[data-csstip-effect="slide"]:hover:before { margin-left:0px }
+
+/* LIGHT SKIN */
+[data-csstip-theme="light"]:before {
+  color:#555;
+  background:#FFF;
+  border:1px solid #777;
+  box-shadow:0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* DARK SKIN */
+[data-csstip-theme="dark"]:before {
+  color:#CCC;
+  background:#333;
+  border:1px solid #666;
+}
